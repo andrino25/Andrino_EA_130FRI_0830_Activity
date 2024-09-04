@@ -40,7 +40,7 @@ class LandscapeCalculator : AppCompatActivity() {
     private fun setupButtons() {
         val buttonActions = mapOf(
             R.id.ACBtn to ::clear,
-            R.id.moduloBtn to { setOperator("%") },
+            R.id.moduloBtn to { appendText("%") },
             R.id.BackBtn to ::deleteLastChar,
             R.id.divideBtn to { setOperator("/") },
             R.id.multiplyBtn to { setOperator("*") },
@@ -68,15 +68,11 @@ class LandscapeCalculator : AppCompatActivity() {
 
     private fun toggleSign() {
         if (currentInput.isNotEmpty()) {
-            // Check if the current input is a valid number
             val text = currentInput.toString()
             if (text.toDoubleOrNull() != null) {
-                // Toggle the sign
                 if (text.startsWith("-")) {
-                    // If the number is negative, remove the leading '-'
                     currentInput.delete(0, 1)
                 } else {
-                    // If the number is positive, add a leading '-'
                     currentInput.insert(0, "-")
                 }
                 display.text = currentInput
@@ -122,7 +118,7 @@ class LandscapeCalculator : AppCompatActivity() {
 
     private fun setOperator(op: String) {
         if (currentInput.isNotEmpty()) {
-            operand1 = currentInput.toString().toDoubleOrNull()
+            operand1 = evaluatePercentage(currentInput.toString())
             if (operand1 != null) {
                 operator = op
                 currentInput.append(" $operator ")
@@ -135,14 +131,13 @@ class LandscapeCalculator : AppCompatActivity() {
     private fun calculateResult() {
         val parts = currentInput.split(" ")
         if (parts.size == 3) {
-            val operand2 = parts[2].toDoubleOrNull()
+            val operand2 = evaluatePercentage(parts[2])
             if (operand1 != null && operand2 != null && operator != null) {
                 val resultValue = when (operator) {
                     "+" -> add(operand1!!, operand2)
                     "-" -> subtract(operand1!!, operand2)
                     "*" -> multiply(operand1!!, operand2)
                     "/" -> divide(operand1!!, operand2)
-                    "%" -> modulo(operand1!!, operand2)
                     else -> return
                 }
                 result.text = display.text
@@ -156,15 +151,20 @@ class LandscapeCalculator : AppCompatActivity() {
         }
     }
 
+    private fun evaluatePercentage(value: String): Double? {
+        val trimmedValue = value.trim()
+        return if (trimmedValue.endsWith("%")) {
+            val percentageValue = trimmedValue.removeSuffix("%").toDoubleOrNull()
+            percentageValue?.div(100.0)
+        } else {
+            trimmedValue.toDoubleOrNull()
+        }
+    }
+
     private fun add(a: Double, b: Double) = a + b
     private fun subtract(a: Double, b: Double) = a - b
     private fun multiply(a: Double, b: Double) = a * b
     private fun divide(a: Double, b: Double) = if (b != 0.0) a / b else {
-        display.text = ""
-        0.00
-    }
-
-    private fun modulo(a: Double, b: Double) = if (b != 0.0) a % b else {
         display.text = ""
         0.00
     }
@@ -203,7 +203,6 @@ class LandscapeCalculator : AppCompatActivity() {
         super.onConfigurationChanged(newConfig)
 
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            // Save state and switch to landscape activity
             val intent = Intent(this, LandscapeCalculator::class.java).apply {
                 putExtra("display_text", display.text.toString())
                 putExtra("result_text", result.text.toString())
@@ -213,10 +212,9 @@ class LandscapeCalculator : AppCompatActivity() {
                 putExtra("is_initial_input", isInitialInput)
             }
             startActivity(intent)
-            finish() // Finish the portrait activity to prevent it from being in the background
+            finish()
 
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            // Save state and switch to portrait activity
             val intent = Intent(this, PortraitCalculator::class.java).apply {
                 putExtra("display_text", display.text.toString())
                 putExtra("result_text", result.text.toString())
@@ -226,9 +224,8 @@ class LandscapeCalculator : AppCompatActivity() {
                 putExtra("is_initial_input", isInitialInput)
             }
             startActivity(intent)
-            finish() // Finish the landscape activity to prevent it from being in the background
+            finish()
         }
     }
-
 }
 

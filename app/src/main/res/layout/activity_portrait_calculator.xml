@@ -38,6 +38,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="40dp"
             android:textColor="@color/white"
+            android:text="@string/zero"
             android:layout_marginBottom="20dp"
             android:textSize="50dp" />
 
@@ -65,7 +66,7 @@
             <Button
                 android:id="@+id/ACBtn"
                 android:layout_width="60dp"
-                android:text="AC"
+                android:text="@string/ac"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/number_buttons"
                 android:textColor="@color/white"
@@ -75,9 +76,9 @@
             <Button
                 android:id="@+id/moduloBtn"
                 android:layout_width="60dp"
-                android:text="%"
+                android:text="@string/modulo"
                 android:layout_gravity="center"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/number_buttons"
                 android:textColor="@color/white"
@@ -87,7 +88,7 @@
             <Button
                 android:id="@+id/BackBtn"
                 android:layout_width="60dp"
-                android:text="CE"
+                android:text="@string/back"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/number_buttons"
                 android:textColor="@color/white"
@@ -97,16 +98,15 @@
             <Button
                 android:id="@+id/divideBtn"
                 android:layout_width="60dp"
-                android:text="÷"
+                android:text="@string/divide"
                 android:background="@drawable/circular_buttons"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:layout_gravity="center"
                 android:layout_height="60dp"/>
 
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/layout2"
@@ -120,7 +120,7 @@
             <Button
                 android:id="@+id/sevenBtn"
                 android:layout_width="60dp"
-                android:text="7"
+                android:text="@string/seven"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginRight="30dp"
@@ -130,7 +130,7 @@
             <Button
                 android:id="@+id/eightBtn"
                 android:layout_width="60dp"
-                android:text="8"
+                android:text="@string/eight"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginRight="30dp"
@@ -140,7 +140,7 @@
             <Button
                 android:id="@+id/nineBtn"
                 android:layout_width="60dp"
-                android:text="9"
+                android:text="@string/nine"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginRight="30dp"
@@ -150,10 +150,10 @@
             <Button
                 android:id="@+id/multiplyBtn"
                 android:layout_width="60dp"
-                android:text="×"
+                android:text="@string/multiply"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:layout_gravity="center"
                 android:background="@drawable/circular_buttons"
                 android:layout_height="60dp"/>
@@ -172,7 +172,7 @@
             <Button
                 android:id="@+id/fourBtn"
                 android:layout_width="60dp"
-                android:text="4"
+                android:text="@string/four"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginRight="30dp"
@@ -182,7 +182,7 @@
             <Button
                 android:id="@+id/fiveBtn"
                 android:layout_width="60dp"
-                android:text="5"
+                android:text="@string/five"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginRight="30dp"
@@ -192,7 +192,7 @@
             <Button
                 android:id="@+id/sixBtn"
                 android:layout_width="60dp"
-                android:text="6"
+                android:text="@string/six"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginRight="30dp"
@@ -202,10 +202,10 @@
             <Button
                 android:id="@+id/subtractBtn"
                 android:layout_width="60dp"
-                android:text="-"
+                android:text="@string/subtract"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:layout_gravity="center"
                 android:background="@drawable/circular_buttons"
                 android:layout_height="60dp"/>
@@ -224,7 +224,7 @@
             <Button
                 android:id="@+id/oneBtn"
                 android:layout_width="60dp"
-                android:text="1"
+                android:text="@string/one"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginRight="30dp"
@@ -234,7 +234,7 @@
             <Button
                 android:id="@+id/twoBtn"
                 android:layout_width="60dp"
-                android:text="2"
+                android:text="@string/two"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginRight="30dp"
@@ -244,7 +244,7 @@
             <Button
                 android:id="@+id/threeBtn"
                 android:layout_width="60dp"
-                android:text="3"
+                android:text="@string/three"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginRight="30dp"
@@ -254,10 +254,10 @@
             <Button
                 android:id="@+id/addBtn"
                 android:layout_width="60dp"
-                android:text="+"
+                android:text="@string/add"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:layout_gravity="center"
                 android:background="@drawable/circular_buttons"
                 android:layout_height="60dp"/>
@@ -275,7 +275,7 @@
             <Button
                 android:id="@+id/negativeBtn"
                 android:layout_width="60dp"
-                android:text="+/-"
+                android:text="@string/negative"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginRight="30dp"
@@ -285,38 +285,36 @@
             <Button
                 android:id="@+id/zeroBtn"
                 android:layout_width="60dp"
-                android:text="0"
+                android:text="@string/zero"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
                 android:background="@drawable/number_buttons"
                 android:layout_height="60dp"/>
 
             <Button
                 android:id="@+id/pointBtn"
                 android:layout_width="60dp"
-                android:text="."
+                android:text="@string/point"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginRight="30dp"
                 android:layout_gravity="center"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:background="@drawable/number_buttons"
                 android:layout_height="60dp"/>
 
             <Button
                 android:id="@+id/equalsBtn"
                 android:layout_width="60dp"
-                android:text="="
+                android:text="@string/equals"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:layout_gravity="center"
                 android:background="@drawable/circular_buttons"
                 android:layout_height="60dp"/>
         </LinearLayout>
-
-
 
     </RelativeLayout>
 
