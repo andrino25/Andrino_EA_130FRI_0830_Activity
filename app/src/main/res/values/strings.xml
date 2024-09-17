@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NewsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_goes_here">Content goes here</string>
+
+    <!-- Headlines -->
+    <string name="headline_1">Local Park Reopens with New Features</string>
+    <string name="headline_2">Tech Giant Unveils Innovative Smartwatch</string>
+    <string name="headline_3">Local High School Wins National Debate Championship</string>
+
+    <!-- Contents -->
+    <string name="content_1">After months of renovations, Central Park is back in action! The newly updated park now includes a state-of-the-art playground, a community garden, and improved walking trails. Residents are excited to explore the new amenities and enjoy the revitalized green space.</string>
+    <string name="content_2">XYZ Technologies has just launched their latest smartwatch, featuring advanced health monitoring, a sleek design, and extended battery life. The new device aims to revolutionize personal health tracking and is expected to hit stores next month.</string>
+    <string name="content_3">The debate team from Riverside High School has clinched the top spot at the National Debate Championship. Their impressive performance and strategic arguments earned them first place, bringing pride and recognition to the entire community.</string>
+
+</resources>
