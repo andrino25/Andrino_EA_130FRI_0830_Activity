@@ -10,7 +10,8 @@
         android:id="@+id/content_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="@dimen/text_size"
+        android:fontFamily="sans-serif"
         android:textColor="@color/black"
         android:text="@string/content_goes_here" />
 
