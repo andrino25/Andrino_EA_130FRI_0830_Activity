@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action"
+        android:title="@string/menu"
+        android:icon="@drawable/ic_menu_icon"
+        app:showAsAction="ifRoom">
+
+        <menu>
+
+            <item
+                android:id="@+id/menu_first_fragment"
+                android:icon="@drawable/ic_first_fragment"
+                android:title="@string/go_to_first_fragment"/>
+
+            <!-- Second Fragment Intent -->
+            <item
+                android:id="@+id/menu_second_fragment"
+                android:title="@string/go_to_dialog_fragment"
+                android:icon="@drawable/ic_dialog_fragment">
+
+            </item>
+
+            <!-- Submenu with Exit option -->
+            <item
+                android:id="@+id/menu_more"
+                android:icon="@drawable/ic_exit_icon"
+                android:title="@string/exit">
+                <menu>
+                    <item
+                        android:id="@+id/menu_exit"
+                        android:title="@string/press_to_exit_app"
+                        android:icon="@drawable/ic_exit_icon2"/>
+                </menu>
+            </item>
+
+        </menu>
+
+
+    </item>
+
+</menu>
