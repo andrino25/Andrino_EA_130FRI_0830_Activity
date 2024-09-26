@@ -38,10 +38,8 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.menu_second_fragment -> {
                 // Navigate to SecondFragment using FragmentTransaction
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, DialogFragment())
-                    .addToBackStack(null)
-                    .commit()
+                val dialog = DialogFragment() // Create instance of DialogFragment
+                dialog.show(supportFragmentManager, "DialogFragment") // Show the DialogFragment
                 return true
             }
             R.id.menu_exit -> {
