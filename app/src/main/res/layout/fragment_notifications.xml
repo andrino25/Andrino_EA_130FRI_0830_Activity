@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment"
+    android:layout_marginBottom="56dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_profile_icon"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="20dp"
+            app:shapeAppearanceOverlay="@style/CircularImageViewStyle"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/edit_layout"
+            android:layout_below="@+id/profile"
+            android:layout_marginTop="10dp"
+            android:hint="@string/enter_name"
+            android:paddingStart="20dp"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/edit_layout"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="20dp"
+            android:hint="@string/enter_address"
+            android:paddingStart="20dp"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:id="@+id/contactNum"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/edit_layout"
+            android:layout_below="@+id/address"
+            android:layout_marginTop="20dp"
+            android:hint="@string/enter_contact_number"
+            android:paddingStart="20dp"
+            android:inputType="number"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/genderTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textSize="20sp"
+            android:layout_below="@id/contactNum"
+            android:layout_alignStart="@id/contactNum"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_below="@id/genderTxt"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/RadioButton1" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/radioButton2" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/radioButton3" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/hobbiesTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hobbies"
+            android:textSize="20sp"
+            android:layout_below="@id/radioGroup"
+            android:layout_alignStart="@id/contactNum"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            />
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_below="@id/hobbiesTxt"
+            android:layout_marginHorizontal="10dp"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/sports"
+                android:layout_width="wrap_content"
+                android:text="Play sports"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/reading"
+                android:layout_width="wrap_content"
+                android:text="Reading"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/movies"
+                android:layout_width="wrap_content"
+                android:text="Watching Movies"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_below="@id/layout1"
+            android:layout_marginHorizontal="10dp"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/sleeping"
+                android:layout_width="wrap_content"
+                android:text="Sleeping"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/coding"
+                android:layout_width="wrap_content"
+                android:text="Coding"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/drawing"
+                android:layout_width="wrap_content"
+                android:text="Drawing"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_below="@+id/layout2"
+            android:layout_marginHorizontal="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edi_layout2"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

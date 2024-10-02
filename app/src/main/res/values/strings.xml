@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">BottomNavigation</string>
+    <string name="title_home">Calculator</string>
+    <string name="title_dashboard">ToDoList</string>
+    <string name="title_notifications">Profile</string>
+    <string name="AC">AC</string>
+    <string name="text_20dp">20dp</string>
+    <string name="ac">AC</string>
+    <string name="modulo">%</string>
+    <string name="back">CE</string>
+    <string name="divide">÷</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="multiply">×</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="subtract">-</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="add">+</string>
+    <string name="negative">+/-</string>
+    <string name="zero">0</string>
+    <string name="point">.</string>
+    <string name="equals">=</string>
+    <string name="todolist">ToDoList</string>
+    <string name="enter_task">Enter Task</string>
+    <string name="edit">Edit\n</string>
+    <string name="delete">Delete\n</string>
+    <string name="enter_name">Enter name...</string>
+    <string name="enter_contact_number">Enter contact number...</string>
+    <string name="enter_address">Enter address...</string>
+    <string name="gender">Gender</string>
+    <string name="RadioButton1">Male</string>
+    <string name="radioButton2">Female</string>
+    <string name="radioButton3">Others</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="radioButton1">Male</string>
+    <string name="plus">+</string>
+</resources>
