@@ -10,11 +10,13 @@ import android.widget.EditText
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
+import com.google.android.material.imageview.ShapeableImageView
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var listView: ListView
     private lateinit var editText: EditText
+    private lateinit var addBtn: ShapeableImageView
     private val tasks = mutableListOf<String>()
     private lateinit var adapter: TaskAdapter
     private lateinit var gestureDetector: GestureDetector
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         listView = findViewById(R.id.listView)
         editText = findViewById(R.id.editText)
+        addBtn = findViewById(R.id.addBtn) // Find the button
 
         adapter = TaskAdapter(this, tasks)
         listView.adapter = adapter
@@ -46,19 +49,20 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        // Add text directly to the list when "Enter" is pressed in the EditText
-        editText.setOnKeyListener { _, keyCode, event ->
-            if (event.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
-                val task = editText.text.toString()
-                if (task.isNotBlank()) {
-                    tasks.add(task)
-                    adapter.notifyDataSetChanged()
-                    editText.text.clear() // Clear the EditText after adding the task
-                }
-                true
-            } else {
-                false
-            }
+        // Set an OnClickListener on the add button to add a task
+        addBtn.setOnClickListener {
+            addTask()
+        }
+
+        // Remove the Enter key listener as we are no longer using it
+    }
+
+    private fun addTask() {
+        val task = editText.text.toString()
+        if (task.isNotBlank()) {
+            tasks.add(task)
+            adapter.notifyDataSetChanged()
+            editText.text.clear() // Clear the EditText after adding the task
         }
     }
 
