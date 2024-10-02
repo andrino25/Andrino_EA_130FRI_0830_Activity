@@ -33,6 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/layout1"
         android:layout_marginStart="20dp"
+        android:singleLine="true"
         android:layout_marginEnd="30dp" />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout1"
