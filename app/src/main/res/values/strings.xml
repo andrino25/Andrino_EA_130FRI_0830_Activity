@@ -39,4 +39,11 @@
     <string name="hobbies">Hobbies</string>
     <string name="radioButton1">Male</string>
     <string name="plus">+</string>
+    <string name="play_sports">Play sports</string>
+    <string name="reading">Reading</string>
+    <string name="watching_movies">Watching Movies</string>
+    <string name="sleeping">Sleeping</string>
+    <string name="coding">Coding</string>
+    <string name="drawing">Drawing</string>
+    <string name="save">Save</string>
 </resources>

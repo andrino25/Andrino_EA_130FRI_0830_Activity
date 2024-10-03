@@ -122,21 +122,21 @@
             <CheckBox
                 android:id="@+id/sports"
                 android:layout_width="wrap_content"
-                android:text="Play sports"
+                android:text="@string/play_sports"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/reading"
                 android:layout_width="wrap_content"
-                android:text="Reading"
+                android:text="@string/reading"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/movies"
                 android:layout_width="wrap_content"
-                android:text="Watching Movies"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"/>
+                android:text="@string/watching_movies" />
 
         </LinearLayout>
 
@@ -150,19 +150,19 @@
             <CheckBox
                 android:id="@+id/sleeping"
                 android:layout_width="wrap_content"
-                android:text="Sleeping"
+                android:text="@string/sleeping"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/coding"
                 android:layout_width="wrap_content"
-                android:text="Coding"
+                android:text="@string/coding"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/drawing"
                 android:layout_width="wrap_content"
-                android:text="Drawing"
+                android:text="@string/drawing"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
 
@@ -174,7 +174,7 @@
             android:layout_marginHorizontal="40dp"
             android:layout_width="match_parent"
             android:layout_marginTop="20dp"
-            android:text="Save"
+            android:text="@string/save"
             android:textColor="@color/white"
             android:layout_marginBottom="20dp"
             android:background="@drawable/edi_layout2"
