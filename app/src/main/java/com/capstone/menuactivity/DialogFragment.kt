@@ -43,9 +43,10 @@ class DialogFragment : DialogFragment() {
             }
 
             .setNegativeButton("Negative") { dialog, _ ->
-                activity?.finishAffinity()
                 dialog.dismiss()
+                requireActivity().finish()
             }
+
 
         return builder.create()
     }
